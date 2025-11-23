@@ -92,7 +92,6 @@ const Dashboard = () => {
 
   return (
     <div className={`min-h-screen ${bgClass} p-6 transition-colors duration-300`} dir="rtl">
-      {/* Header */}
       <div className="mb-8 flex items-center justify-between">
         <div>
           <h1 className={`text-3xl font-bold ${textPrimary} mb-2`}>لوحة التحكم</h1>
@@ -106,7 +105,6 @@ const Dashboard = () => {
         </button>
       </div>
 
-      {/* Filters */}
       <div className="flex gap-4 mb-6">
         <button 
           onClick={() => setTimeRange('day')}
@@ -132,7 +130,6 @@ const Dashboard = () => {
         </button>
       </div>
 
-      {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {stats.map((stat, idx) => (
           <div key={idx} className={`${cardBg} rounded-xl shadow-sm p-6 ${hoverBg} transition-all duration-300`}>
@@ -151,9 +148,7 @@ const Dashboard = () => {
         ))}
       </div>
 
-      {/* Charts Row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        {/* Sales Chart */}
         <div className={`lg:col-span-2 ${cardBg} rounded-xl shadow-sm p-6 transition-colors duration-300`}>
           <h3 className={`text-lg font-bold ${textPrimary} mb-4`}>المبيعات والإيرادات</h3>
           <ResponsiveContainer width="100%" height={300}>
@@ -176,7 +171,6 @@ const Dashboard = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* Category Pie Chart */}
         <div className={`${cardBg} rounded-xl shadow-sm p-6 transition-colors duration-300`}>
           <h3 className={`text-lg font-bold ${textPrimary} mb-4`}>المبيعات حسب الفئة</h3>
           <ResponsiveContainer width="100%" height={300}>
@@ -208,9 +202,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Bottom Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Top Products */}
         <div className={`${cardBg} rounded-xl shadow-sm p-6 transition-colors duration-300`}>
           <h3 className={`text-lg font-bold ${textPrimary} mb-4`}>المنتجات الأكثر مبيعاً</h3>
           <div className="space-y-4">
@@ -232,7 +224,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Recent Orders */}
         <div className={`${cardBg} rounded-xl shadow-sm p-6 transition-colors duration-300`}>
           <h3 className={`text-lg font-bold ${textPrimary} mb-4`}>آخر الطلبات</h3>
           <div className="overflow-x-auto">
