@@ -17,10 +17,10 @@ const Dashboard = () => {
   ];
 
   const categoryData = [
-    { name: 'إلكترونيات', value: 400, color: '#3b82f6' },
-    { name: 'ملابس', value: 300, color: '#8b5cf6' },
-    { name: 'طعام', value: 200, color: '#ec4899' },
-    { name: 'كتب', value: 100, color: '#f59e0b' },
+    { name: 'إلكترونيات', value: 400, color: '#e8501e' },
+    { name: 'ملابس', value: 300, color: '#17130d' },
+    { name: 'طعام', value: 200, color: '#c43f12' },
+    { name: 'كتب', value: 100, color: '#e8a01e' },
   ];
 
   const topProducts = [
@@ -153,20 +153,20 @@ const Dashboard = () => {
           <h3 className={`text-lg font-bold ${textPrimary} mb-4`}>المبيعات والإيرادات</h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={salesData}>
-              <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? '#374151' : '#e5e7eb'} />
-              <XAxis dataKey="name" stroke={darkMode ? '#9ca3af' : '#6b7280'} />
-              <YAxis stroke={darkMode ? '#9ca3af' : '#6b7280'} />
+              <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? '#2a251c' : '#ddd4c0'} />
+              <XAxis dataKey="name" stroke={darkMode ? '#8a8172' : '#57503f'} />
+              <YAxis stroke={darkMode ? '#8a8172' : '#57503f'} />
               <Tooltip 
                 contentStyle={{
-                  backgroundColor: darkMode ? '#1f2937' : '#ffffff',
-                  border: `1px solid ${darkMode ? '#374151' : '#e5e7eb'}`,
-                  borderRadius: '8px',
-                  color: darkMode ? '#f3f4f6' : '#1f2937'
+                  backgroundColor: darkMode ? '#17130d' : '#f4efe6',
+                  border: `1px solid ${darkMode ? '#2a251c' : '#ddd4c0'}`,
+                  borderRadius: '0px',
+                  color: darkMode ? '#f4efe6' : '#17130d'
                 }}
               />
               <Legend />
-              <Line type="monotone" dataKey="sales" stroke="#3b82f6" strokeWidth={2} name="المبيعات" />
-              <Line type="monotone" dataKey="revenue" stroke="#8b5cf6" strokeWidth={2} name="الإيرادات" />
+              <Line type="monotone" dataKey="sales" stroke="#e8501e" strokeWidth={2} name="المبيعات" />
+              <Line type="monotone" dataKey="revenue" stroke="#17130d" strokeWidth={2} name="الإيرادات" />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -182,7 +182,7 @@ const Dashboard = () => {
                 labelLine={false}
                 label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                 outerRadius={80}
-                fill="#8884d8"
+                fill="#e8501e"
                 dataKey="value"
               >
                 {categoryData.map((entry, index) => (
@@ -191,10 +191,10 @@ const Dashboard = () => {
               </Pie>
               <Tooltip 
                 contentStyle={{
-                  backgroundColor: darkMode ? '#1f2937' : '#ffffff',
-                  border: `1px solid ${darkMode ? '#374151' : '#e5e7eb'}`,
-                  borderRadius: '8px',
-                  color: darkMode ? '#f3f4f6' : '#1f2937'
+                  backgroundColor: darkMode ? '#17130d' : '#f4efe6',
+                  border: `1px solid ${darkMode ? '#2a251c' : '#ddd4c0'}`,
+                  borderRadius: '0px',
+                  color: darkMode ? '#f4efe6' : '#17130d'
                 }}
               />
             </PieChart>
